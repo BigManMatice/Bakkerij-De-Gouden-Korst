@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div>
+                <img id="logo" src="assets/images/logo.svg" alt="logo">
+            </div>
+            <ul id="pages">
+                <li><a href="#">Assortiment</a></li>
+                <li><a href="#">Bestellen</a></li>
+                <li><a href="#">Over Ons</a></li>
+            </ul>
+
+            <ul>
+                <li><a href=""><img id="search" src="assets/images/search-svgrepo-com.svg" alt="Search"></a></li>
+                <li><a href=""><img id="baskett" src="assets/images/bag-svgrepo-com.svg" alt="Baskett"></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Dagvers brood, vooraf besteld en zo afgehaald.</h1>
+            <button type="button">Bestel nu</button>
+        </section>
+
+        <form action="#" method="POST">
+            <section class="shop">
+                <div class="assortiment-grid">
+                    <!-- 1. Zuurdesembrood (Bread with Sliced/Unsliced & Whole/Half) -->
+                    <article class="card" data-category="brood">
+
+                        <div class="card-header">
+                            <h3>Zuurdesembrood</h3>
+                            <p class="price">€ 3,80</p>
+                        </div>
+
+                        <img src="assets/images/products/Sourdough.jpg" alt="Zuurdesembrood" class="product-image">
+
+                        <div class="wrapper option-group">
+                            <label class="option">
+                                <input checked value="gesneden" name="zuurdesem_snijden" type="radio" class="input" />
+                                <div class="btn"><span class="span">Gesneden</span></div>
+                            </label>
+                            <label class="option">
+                                <input value="ongesneden" name="zuurdesem_snijden" type="radio" class="input" />
+                                <div class="btn"><span class="span">Ongesneden</span></div>
+                            </label>
+                        </div>
+
+                        <div class="wrapper option-group">
+                            <label class="option">
+                                <input checked value="heel" name="zuurdesem_formaat" type="radio" class="input" />
+                                <div class="btn"><span class="span">Heel</span></div>
+                            </label>
+                            <label class="option">
+                                <input value="half" name="zuurdesem_formaat" type="radio" class="input" />
+                                <div class="btn"><span class="span">Half</span></div>
+                            </label>
+                        </div>
+
+                        <div class="card-footer">
+                            <label class="qty-stepper">
+                                <button type="button" class="qty-btn minus">-</button>
+                                <input type="number" class="qty-input" value="0">
+                                <button type="button" class="qty-btn plus">+</button>
+                            </label>
+
+                            <button class="bestel-btn">Bestel</button>
+                        </div>
+
+                    </article>
+
+                    <!-- 2. Meergranenbrood -->
+                    <article class="card" data-category="brood">
+
+                        <div class="card-header">
+                            <h3>Meergranenbrood</h3>
+                            <p class="price">€ 3,50</p>
+                        </div>
+
+                        <img src="assets/images/products/Sourdough.jpg" alt="Zuurdesembrood" class="product-image">
+
+                        <div class="wrapper option-group">
+                            <label class="option">
+                                <input checked value="gesneden" name="zuurdesem_snijden" type="radio" class="input" />
+                                <div class="btn"><span class="span">Gesneden</span></div>
+                            </label>
+                            <label class="option">
+                                <input value="ongesneden" name="zuurdesem_snijden" type="radio" class="input" />
+                                <div class="btn"><span class="span">Ongesneden</span></div>
+                            </label>
+                        </div>
+
+                        <div class="wrapper option-group">
+                            <label class="option">
+                                <input checked value="heel" name="zuurdesem_formaat" type="radio" class="input" />
+                                <div class="btn"><span class="span">Heel</span></div>
+                            </label>
+                            <label class="option">
+                                <input value="half" name="zuurdesem_formaat" type="radio" class="input" />
+                                <div class="btn"><span class="span">Half</span></div>
+                            </label>
+                        </div>
+
+                        <div class="card-footer">
+                            <label class="qty-stepper">
+                                <button type="button" class="qty-btn minus">-</button>
+                                <input type="number" class="qty-input" value="0">
+                                <button type="button" class="qty-btn plus">+</button>
+                            </label>
+
+                            <button class="bestel-btn">Bestel</button>
+                        </div>
+
+                    </article>
+
+                    <!-- 3. Pistolets (Simple quantity only) -->
+                    <article class="card" data-category="pistolets">
+                        <h3>Krokante Pistolets (per stuk)</h3>
+                        <p class="price">€ 0,85</p>
+
+                        <label class="qty">
+                            Aantal: <input type="number" name="pistolets_aantal" min="0" value="0" />
+                        </label>
+                    </article>
+
+                    <!-- 4. Verse Fruitvlaai (Cake with optional custom message) -->
+                    <article class="card" data-category="taarten">
+                        <h3>Verse Fruitvlaai (6 pers.)</h3>
+                        <p class="price">€ 14,50</p>
+
+                        <label class="cake-msg">
+                            Bericht op taart (optioneel):
+                            <input type="text" name="fruitvlaai_bericht" maxlength="40"
+                                placeholder="Bijv. Gelukkige Verjaardag Oma" />
+                        </label>
+
+                        <label class="qty">
+                            Aantal: <input type="number" name="fruitvlaai_aantal" min="0" value="0" />
+                        </label>
+                    </article>
+
+                    <!-- 5. Feestelijke Kerstbox -->
+                    <article class="card" data-category="kerstbox">
+                        <h3>Feestelijke Kerstbox</h3>
+                        <p class="price">€ 24,00</p>
+                        <p class="desc">Assortiment mini-pistolets, croissants, chocoladebroodjes en confituur.</p>
+
+                        <label class="qty">
+                            Aantal: <input type="number" name="kerstbox_aantal" min="0" value="0" />
+                        </label>
+                    </article>
+                </div>
+
+                <!-- Checkout Sidebar -->
+                <aside class="checkout-sidebar">
+                    <h2>Uw Bestelling</h2>
+
+                    <div class="form-group">
+                        <label for="pickup-date">1. Kies een afhaaldatum</label>
+                        <input type="date" id="pickup-date" name="afhaaldatum" required />
+                        <small>Gesloten op dinsdag. Bestel voor 18:00 voor de volgende dag.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pickup-time">2. Kies een tijdstip</label>
+                        <select id="pickup-time" name="tijdstip" required>
+                            <option value="">-- Selecteer tijdslot --</option>
+                            <option value="08:00-08:15">08:00 - 08:15</option>
+                            <option value="08:15-08:30">08:15 - 08:30</option>
+                            <option value="08:30-08:45">08:30 - 08:45</option>
+                            <option value="08:45-09:00" disabled>08:45 - 09:00 (Vol)</option>
+                            <option value="09:00-09:15">09:00 - 09:15</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <h3>3. Uw Gegevens</h3>
+
+                        <label for="customer-name">Naam</label>
+                        <input type="text" id="customer-name" name="naam" placeholder="Uw volledige naam" required />
+
+                        <label for="customer-phone">Telefoonnummer</label>
+                        <input type="tel" id="customer-phone" name="telefoon" placeholder="04XX XX XX XX" required />
+
+                        <label for="customer-email">E-mailadres</label>
+                        <input type="email" id="customer-email" name="email" placeholder="naam@voorbeeld.be" required />
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="nieuwsbrief" value="ja" />
+                            Ja, ik wil de kerstnieuwsbrief ontvangen!
+                        </label>
+                    </div>
+
+                    <p class="payment-note">U betaalt gewoon bij het afhalen in de winkel.</p>
+                    <button type="submit" class="submit-btn">Bestelling plaatsen</button>
+                </aside>
+            </section>
+        </form>
+        <section class="About-Us">
+
+        </section>
+
+
+</body>
+
+</html>
